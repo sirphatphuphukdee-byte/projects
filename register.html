@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>สมัครสมาชิก | Greenly</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+
+</head>
+
+
+<body class="auth-page">
+
+    <!-- Falling Leaves -->
+
+    <div
+        class="leaf-container"
+        id="leafContainer"
+    ></div>
+
+
+    <!-- Navbar -->
+
+    <header class="navbar">
+
+        <div class="container nav-content">
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                🌿 Greenly
+            </a>
+
+
+            <div class="nav-actions">
+
+                <button
+                    class="icon-btn"
+                    id="themeToggle"
+                >
+                    🌙
+                </button>
+
+                <a
+                    href="login.html"
+                    class="login-nav-btn"
+                >
+                    เข้าสู่ระบบ
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Register -->
+
+    <main class="auth-container">
+
+        <div class="auth-card">
+
+
+            <!-- Left -->
+
+            <div class="auth-image">
+
+                <div class="auth-image-content">
+
+                    <span>
+                        🌱 GREENLY
+                    </span>
+
+                    <h1>
+                        Grow Your
+                        <br>
+                        Green Life
+                    </h1>
+
+                    <p>
+                        สมัครสมาชิกกับ Greenly
+                        แล้วเริ่มเติมสีเขียวให้ชีวิตของคุณ
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Right -->
+
+            <div class="auth-form">
+
+                <div class="auth-header">
+
+                    <span>
+                        WELCOME TO GREENLY
+                    </span>
+
+                    <h2>
+                        สร้างบัญชี
+                    </h2>
+
+                    <p>
+                        สมัครสมาชิกเพื่อเริ่มต้นการเดินทาง
+                        กับโลกของต้นไม้
+                    </p>
+
+                </div>
+
+
+                <form id="registerForm">
+
+
+                    <!-- Name -->
+
+                    <div class="form-group">
+
+                        <label>
+                            ชื่อ
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span>
+                                👤
+                            </span>
+
+                            <input
+                                type="text"
+                                id="firstName"
+                                placeholder="ชื่อของคุณ"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Last Name -->
+
+                    <div class="form-group">
+
+                        <label>
+                            นามสกุล
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span>
+                                👤
+                            </span>
+
+                            <input
+                                type="text"
+                                id="lastName"
+                                placeholder="นามสกุล"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label>
+                            อีเมล
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span>
+                                ✉️
+                            </span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="example@email.com"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <label>
+                            รหัสผ่าน
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span>
+                                🔒
+                            </span>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="อย่างน้อย 8 ตัวอักษร"
+                                minlength="8"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                onclick="togglePassword('password', this)"
+                            >
+                                👁️
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Confirm Password -->
+
+                    <div class="form-group">
+
+                        <label>
+                            ยืนยันรหัสผ่าน
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span>
+                                🔐
+                            </span>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="กรอกรหัสผ่านอีกครั้ง"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                onclick="
+                                    togglePassword(
+                                        'confirmPassword',
+                                        this
+                                    )
+                                "
+                            >
+                                👁️
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Terms -->
+
+                    <label class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        <span>
+
+                            ฉันยอมรับ
+                            <a href="#">
+                                ข้อกำหนดการใช้งาน
+                            </a>
+                            และ
+                            <a href="#">
+                                นโยบายความเป็นส่วนตัว
+                            </a>
+
+                        </span>
+
+                    </label>
+
+
+                    <!-- Submit -->
+
+                    <button
+                        type="submit"
+                        class="auth-submit"
+                    >
+
+                        🌱 สมัครสมาชิก
+
+                    </button>
+
+
+                    <!-- Login -->
+
+                    <div class="auth-footer">
+
+                        <span>
+                            มีบัญชีอยู่แล้ว?
+                        </span>
+
+                        <a href="login.html">
+                            เข้าสู่ระบบ
+                        </a>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Toast -->
+
+    <div
+        class="toast"
+        id="toast"
+    ></div>
+
+
+    <script src="register.js"></script>
+
+</body>
+
+</html>

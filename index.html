@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Greenly | Plant Shop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     FALLING LEAVES
+===================================================== -->
+
+<div class="leaf-container" id="leafContainer"></div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="container nav-content">
+
+        <a href="index.html" class="logo">
+            🌿 Greenly
+        </a>
+
+
+        <nav>
+
+            <a href="#home">หน้าหลัก</a>
+
+            <a href="#shop">สินค้า</a>
+
+            <a href="#categories">หมวดหมู่</a>
+
+            <a href="#about">เกี่ยวกับเรา</a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+    <button
+        class="icon-btn"
+        id="themeToggle"
+    >
+        🌙
+    </button>
+
+
+    <a
+        href="login.html"
+        class="login-nav-btn"
+        id="userButton"
+    >
+        เข้าสู่ระบบ
+    </a>
+
+
+    <button
+        class="icon-btn"
+    >
+        ♡
+    </button>
+
+
+    <button
+        class="cart-btn"
+        id="cartButton"
+    >
+        🛒
+
+        <span id="cartCount">
+            0
+        </span>
+
+    </button>
+
+</div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <span class="hero-label">
+                🌱 เติมสีเขียวให้บ้านของคุณ
+            </span>
+
+
+            <h1>
+
+                Bring Nature
+                <br>
+
+                <span>
+                    Into Your Home
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                เติมความสดชื่นให้ทุกพื้นที่
+                ด้วยต้นไม้คุณภาพดี
+                ที่คัดสรรมาเพื่อคุณโดยเฉพาะ
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#shop"
+                    class="btn btn-primary"
+                >
+                    เลือกซื้อต้นไม้ →
+                </a>
+
+
+                <a
+                    href="#about"
+                    class="btn btn-outline"
+                >
+                    เกี่ยวกับ Greenly
+                </a>
+
+            </div>
+
+
+            <div class="hero-info">
+
+                <div>
+
+                    <strong>
+                        500+
+                    </strong>
+
+                    <span>
+                        ต้นไม้
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        1,200+
+                    </strong>
+
+                    <span>
+                        ลูกค้า
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        4.9 ⭐
+                    </strong>
+
+                    <span>
+                        คะแนนรีวิว
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <div class="circle"></div>
+
+
+            <div class="plant-card">
+
+                <div class="plant-image">
+
+                    <img
+                        src="images/monstera.jpg"
+                        alt="Monstera"
+                    >
+
+                </div>
+
+
+                <div class="plant-info">
+
+                    <span>
+                        BEST SELLER
+                    </span>
+
+                    <h3>
+                        Monstera Deliciosa
+                    </h3>
+
+                    <p>
+                        ฿890
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORIES
+===================================================== -->
+
+<section
+    class="categories"
+    id="categories"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>
+                EXPLORE
+            </span>
+
+            <h2>
+                เลือกต้นไม้ที่เหมาะกับคุณ
+            </h2>
+
+            <p>
+                ต้นไม้หลากหลายประเภทสำหรับทุกพื้นที่
+            </p>
+
+        </div>
+
+
+        <div class="category-grid">
+
+
+            <button
+                class="category-card"
+                data-category="air"
+            >
+
+                <div class="category-icon">
+                    🌿
+                </div>
+
+                <h3>
+                    ไม้ฟอกอากาศ
+                </h3>
+
+                <p>
+                    สดชื่นและดูแลง่าย
+                </p>
+
+            </button>
+
+
+            <button
+                class="category-card"
+                data-category="indoor"
+            >
+
+                <div class="category-icon">
+                    🪴
+                </div>
+
+                <h3>
+                    ไม้ประดับ
+                </h3>
+
+                <p>
+                    เพิ่มความสวยให้บ้าน
+                </p>
+
+            </button>
+
+
+            <button
+                class="category-card"
+                data-category="cactus"
+            >
+
+                <div class="category-icon">
+                    🌵
+                </div>
+
+                <h3>
+                    แคคตัส
+                </h3>
+
+                <p>
+                    เหมาะสำหรับมือใหม่
+                </p>
+
+            </button>
+
+
+            <button
+                class="category-card"
+                data-category="small"
+            >
+
+                <div class="category-icon">
+                    🌱
+                </div>
+
+                <h3>
+                    ต้นไม้ขนาดเล็ก
+                </h3>
+
+                <p>
+                    เหมาะกับโต๊ะทำงาน
+                </p>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SHOP
+===================================================== -->
+
+<section
+    class="products"
+    id="shop"
+>
+
+    <div class="container">
+
+
+        <div class="section-header">
+
+            <div>
+
+                <span>
+                    OUR COLLECTION
+                </span>
+
+                <h2>
+                    ต้นไม้ยอดนิยม
+                </h2>
+
+            </div>
+
+        </div>
+
+        
+
+        <!-- SEARCH -->
+
+        <div class="shop-tools">
+
+
+            <div class="search-box">
+
+                <span>
+                    🔍
+                </span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="ค้นหาต้นไม้..."
+                >
+
+            </div>
+
+
+            <div class="filter-buttons">
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all"
+                >
+                    ทั้งหมด
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="air"
+                >
+                    ฟอกอากาศ
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="indoor"
+                >
+                    ไม้ประดับ
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="cactus"
+                >
+                    แคคตัส
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="small"
+                >
+                    ขนาดเล็ก
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCTS -->
+
+        <div
+            class="product-grid"
+            id="productGrid"
+        ></div>
+
+
+        <div
+            class="no-products"
+            id="noProducts"
+        >
+
+            🌱
+
+            <h3>
+                ไม่พบต้นไม้
+            </h3>
+
+            <p>
+                ลองค้นหาด้วยคำอื่น
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section
+    class="about"
+    id="about"
+>
+
+    <div class="container about-content">
+
+
+        <div class="about-image">
+
+            <img
+                src="images/GoldenPothos-1.jpg"
+                alt="Green Plant"
+            >
+
+        </div>
+
+        
+
+        <div class="about-text">
+
+            <span>
+                WHY GREENLY?
+            </span>
+
+            <h2>
+
+                บ้านที่มีต้นไม้
+                <br>
+
+                <em>น่าอยู่ขึ้น</em>
+
+            </h2>
+
+
+            <p>
+
+                Greenly คัดสรรต้นไม้คุณภาพดี
+                พร้อมคำแนะนำในการดูแล
+                เพื่อให้ต้นไม้ของคุณเติบโต
+                และอยู่กับคุณได้นานที่สุด
+
+            </p>
+
+
+            <div class="features">
+
+
+                <div>
+
+                    <span>
+                        🌱
+                    </span>
+
+                    <div>
+
+                        <h4>
+                            คัดสรรคุณภาพ
+                        </h4>
+
+                        <p>
+                            ต้นไม้แข็งแรงพร้อมส่ง
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        📦
+                    </span>
+
+                    <div>
+
+                        <h4>
+                            แพ็กอย่างปลอดภัย
+                        </h4>
+
+                        <p>
+                            ดูแลทุกต้นก่อนจัดส่ง
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        💬
+                    </span>
+
+                    <div>
+
+                        <h4>
+                            ให้คำปรึกษา
+                        </h4>
+
+                        <p>
+                            แนะนำวิธีดูแลต้นไม้
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="newsletter">
+
+    <div class="container newsletter-box">
+
+        <div>
+
+            <span>
+                JOIN OUR COMMUNITY
+            </span>
+
+            <h2>
+                รับข่าวสารและโปรโมชั่น
+            </h2>
+
+            <p>
+                สมัครรับข้อมูลต้นไม้ใหม่และโปรโมชั่นพิเศษ
+            </p>
+
+        </div>
+
+
+        <form>
+
+            <input
+                type="email"
+                placeholder="อีเมลของคุณ"
+            >
+
+            <button>
+                สมัคร
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <div>
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                🌿 Greenly
+            </a>
+
+            <p>
+                เติมพื้นที่สีเขียว
+                <br>
+                ให้ชีวิตของคุณ
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                ร้านค้า
+            </h4>
+
+            <a href="#shop">
+                ต้นไม้ทั้งหมด
+            </a>
+
+            <a href="#categories">
+                หมวดหมู่
+            </a>
+
+            <a href="#shop">
+                โปรโมชั่น
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                ช่วยเหลือ
+            </h4>
+
+            <a href="#">
+                วิธีสั่งซื้อ
+            </a>
+
+            <a href="#">
+                การจัดส่ง
+            </a>
+
+            <a href="#">
+                ติดต่อเรา
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                ติดตามเรา
+            </h4>
+
+            <a href="#">
+                Facebook
+            </a>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                TikTok
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Greenly Plant Shop
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     CART SIDEBAR
+===================================================== -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay"
+></div>
+
+
+<aside
+    class="cart-sidebar"
+    id="cartSidebar"
+>
+
+    <div class="cart-header">
+
+        <h2>
+            🛒 ตะกร้าของคุณ
+        </h2>
+
+        <button
+            id="closeCart"
+            class="close-btn"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-items"
+        id="cartItems"
+    ></div>
+
+
+    <div
+        class="empty-cart"
+        id="emptyCart"
+    >
+
+        <div>
+            🪴
+        </div>
+
+        <h3>
+            ตะกร้ายังว่าง
+        </h3>
+
+        <p>
+            เลือกต้นไม้ที่คุณชอบได้เลย
+        </p>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>
+                รวมทั้งหมด
+            </span>
+
+            <strong id="cartTotal">
+                ฿0
+            </strong>
+
+        </div>
+
+
+        <button
+            class="checkout-btn"
+            id="checkoutButton"
+        >
+            ดำเนินการสั่งซื้อ
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     PRODUCT DETAIL MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="productModal"
+>
+
+    <div class="modal-content">
+
+        <button
+            class="modal-close"
+            id="modalClose"
+        >
+            ×
+        </button>
+
+
+        <div
+            class="modal-image"
+            id="modalImage"
+        ></div>
+
+
+        <div class="modal-info">
+
+            <span id="modalCategory">
+                Indoor Plant
+            </span>
+
+            <h2 id="modalName">
+                Monstera Deliciosa
+            </h2>
+
+            <div
+                class="modal-rating"
+                id="modalRating"
+            >
+                ⭐⭐⭐⭐⭐
+            </div>
+
+            <p
+                id="modalDescription"
+                class="modal-description"
+            ></p>
+
+            <strong
+                id="modalPrice"
+                class="modal-price"
+            >
+                ฿890
+            </strong>
+
+
+            <div class="modal-actions">
+
+                <button
+                    class="btn btn-primary"
+                    id="modalAddCart"
+                >
+                    🛒 เพิ่มลงตะกร้า
+                </button>
+
+                <a
+                    href="product.html"
+                    class="btn btn-outline"
+                    id="detailPageLink"
+                >
+                    ดูรายละเอียด
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+    class="toast"
+    id="toast"
+>
+    🌿 เพิ่มลงตะกร้าแล้ว
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
